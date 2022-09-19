@@ -6,7 +6,7 @@ const CompletedProjects = ({ projects }) => {
       <h1 className='font-semibold text-2xl'>
         Completed projects ({projects.length})
       </h1>
-      <div className='space-y-4'>
+      <div className='space-y-4 pt-6'>
         {projects.length > 0 ? (
           projects.map((project, index) => {
             return <ProjectCard project={project} key={index} />

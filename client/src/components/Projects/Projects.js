@@ -1,19 +1,9 @@
-import { gql, useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
+import { GET_PROJECTS } from '../../queries/projectQueries'
 import CompletedProjects from './CompletedProjects'
 import Header from './Header'
 import NewProjects from './NewProjects'
 import ProgressProjects from './ProgressProjects'
-
-const GET_PROJECTS = gql`
-  query getProjects {
-    projects {
-      id
-      name
-      description
-      status
-    }
-  }
-`
 
 const Projects = () => {
   const { loading, error, data } = useQuery(GET_PROJECTS)
@@ -33,8 +23,8 @@ const Projects = () => {
   )
 
   return (
-    <div className='bg-white rounded-lg'>
-    <Header/>
+    <div className='bg-white rounded-lg h-screen'>
+      <Header />
       {!loading && !error && (
         <div className='xl:grid grid-cols-3 gap-6 px-12'>
           <NewProjects projects={newProjects} />

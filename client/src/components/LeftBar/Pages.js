@@ -3,6 +3,7 @@ import {
   UserGroupIcon,
   ChatIcon,
   CalendarIcon,
+  UsersIcon
 } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom'
 const Pages = () => {
@@ -13,6 +14,12 @@ const Pages = () => {
         <div className='flex items-center gap-4 py-2 mt-6 pl-4  transition rounded-full  hover:bg-[#466BAF] group'>
           <ClipboardIcon className='h-5 group-hover:text-white' />
           <p className='font-medium group-hover:text-white'>Tasks</p>
+        </div>
+      </Link>
+      <Link to='/clients'>
+        <div className='flex items-center gap-4 py-2 mt-6 pl-4  transition rounded-full  hover:bg-[#466BAF] group'>
+          <UsersIcon className='h-5 group-hover:text-white' />
+          <p className='font-medium group-hover:text-white'>Clients</p>
         </div>
       </Link>
       <div className='flex items-center gap-4 py-2 mt-6 pl-4  transition rounded-full  hover:bg-[#466BAF] group'>
